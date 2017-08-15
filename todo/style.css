@@ -197,11 +197,27 @@ ul.todo li .buttons button.complete .unmarked .fill {
     fill: #666;
 }
 
-ul.todo li .buttons button.complete.completed .unmarked {
+#completed ul.todo li .buttons button.complete .unmarked {
     display: none;
 }
 
-ul.todo li .buttons button.complete.completed .marked {
+#completed ul.todo li .buttons button.complete .marked {
     display: block;
 }
 
+ul#completed:not(:empty) {
+    position: relative;
+    padding: 60px 0 0 0;
+}
+
+ul.todo#completed:not(:empty):before {
+    content:'';
+    width: 150px;
+    height: 1px;
+    background: #d8e5e0;
+    position: absolute;
+    top:15px;
+    left: 50%;
+    margin: 0 0 0 -75px;
+
+}
