@@ -228,3 +228,33 @@ ul.todo#completed:not(:empty):before {
     left: 50%;
     margin: 0 0 0 -75px;
 }
+
+@media screen and (min-width: 769px) {
+    html {
+        display: grid;
+        grid-template-columns: [full-start] minmax(1em, 1fr) [main-start] minmax(0, 40em) [main-end] minmax(1em, 1fr) [full-end];
+    }
+
+    body {
+        display: grid;
+        grid-column: 2 / 3;
+    }
+
+    header {
+        width: 100%;
+        display: grid;
+        grid-template-columns: [full-start] minmax(1em, 1fr) [main-start] minmax(0, 40em) [main-end] minmax(1em, 1fr) [full-end];
+    }
+
+    header input {
+        display: grid;
+        grid-column: 2 / 3;
+    }
+
+    header button {
+        position: relative;
+        top: 0;
+        right: 50px;
+    }
+
+}
