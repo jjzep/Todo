@@ -25,7 +25,7 @@ header {
      top: 0;
     left: 0; 
     z-index: 5;
-    background-color: #5C7380;
+    background-color: #444444;
     box-shadow: 0px 2px 7px rgba(137, 137, 137, 0.5);
 }
 
@@ -33,10 +33,10 @@ header input {
     width: 100%;
     height: 50px;
     float: left;
-    color: #FFF;
+    color: #666;
     font-size: 16px;
     font-weight: 400;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, .9);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 25px;
@@ -74,6 +74,7 @@ header button {
     outline: none;
     appearance: none;
     cursor: pointer; 
+    box-shadow: 0px 1px 4px rgb(37, 37, 37);
 }
 
 header button svg {
@@ -87,6 +88,9 @@ header button svg {
 
 header button svg .fill {
     fill:#5C7380;
+    stroke-width: 7%;
+    stroke-linecap: round;
+    stroke: #666;
 }
 
 .container {
@@ -210,6 +214,10 @@ ul#completed:not(:empty) {
     padding: 60px 0 0 0;
 }
 
+ul#completed li:not(.buttons) {
+    opacity: 0.5;
+}
+
 ul.todo#completed:not(:empty):before {
     content:'';
     width: 150px;
@@ -219,5 +227,4 @@ ul.todo#completed:not(:empty):before {
     top:15px;
     left: 50%;
     margin: 0 0 0 -75px;
-
 }
